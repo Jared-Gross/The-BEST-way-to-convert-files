@@ -59,5 +59,44 @@ We don't use `areparse` because we can't directly add arguments to the context m
 
 `sys.argv[-1].split('\\')[-1]` This gives us the file that you right clicked on.
 
+We then need compile the python script using:
+
+`pyinstaller -F pdftoword.py`
+
+In this script i'm using the terminal for feedback, you can use what ever you want, you can use `tkinter`, `qt`, or not give anyfeed back at all, to do that simply use:
+
+`pyinstaller -F --noconsole pdftoword.py`
+
+The `.exe` will be in a `dist` directory where you the python script is located.
+
 ## Addying the python script to the context menu.
-1. Get [EcMenu](https://www.sordum.org/7615/easy-context-menu-v1-6/)
+1. Get [EcMenu](https://www.sordum.org/7615/easy-context-menu-v1-6)
+2. Go to list Editor
+
+![image](https://user-images.githubusercontent.com/25397800/142265460-6c3047bc-a389-4d51-b743-9821bc982953.png)
+
+3. Scroll down to **File Context Menu**
+
+![image](https://user-images.githubusercontent.com/25397800/142265628-ef5ff283-9b47-42af-b3da-a99fba2ef0c2.png)
+
+4. Make sure you select **File Context Menu** and press **Add New** and Browse to where the `.exe` file is located.
+
+![image](https://user-images.githubusercontent.com/25397800/142265847-061e1d4d-b885-4dca-8f23-684304bd62f1.png)
+
+5. Press **Save Changes**
+
+![image](https://user-images.githubusercontent.com/25397800/142266216-52010316-fcbb-4141-a002-73130064e18d.png)
+
+6. Make sure it's checked!
+
+![image](https://user-images.githubusercontent.com/25397800/142266363-5ce4fe62-35e2-41d1-a4f4-86d19a2e2477.png)
+
+7. Press **Apply Changes**
+
+![image](https://user-images.githubusercontent.com/25397800/142266458-9942f641-095e-4dc3-b4ce-0a5146fd8d66.png)
+
+And your done. Right click on any file and you should see it!
+
+# Summary
+This is just a 'quality of life' solution. You can go above and beyond with this method of converting files, you can add a whole suite of file conversions if you so want too.
+
